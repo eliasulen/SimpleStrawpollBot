@@ -12,8 +12,11 @@ namespace SimpleStrawpollBot
         {
             var strawPollId = ""; //Id to strawpoll - IE https://strawpoll.com/YOURIDHERE
             var vote = ""; //Name of vote option
-            int delay = 3000; //Delay between votes
+            int minDelay = 1500; //Min delay milliseconds between votes (random)
+            int maxDelay = 3500; //Max delay milliseconds between votes (random)
             int votes = 500; //Amount of votes
+
+            Random rnd = new Random();
 
             await new BrowserFetcher().DownloadAsync(BrowserFetcher.DefaultRevision);
 
@@ -82,7 +85,7 @@ namespace SimpleStrawpollBot
                         await page.GoToAsync(requestUrl);
                         Console.WriteLine($"Voted #{i + 1} {vote} | {voteId} | {strawPollId}");
                         await page.DeleteCookieAsync();
-                        await Task.Delay(delay);
+                        await Task.Delay(rnd.Next(minDelay, maxDelay));
                     }
 
                     Console.WriteLine($"Finished. Vote attempts: {votes}");
