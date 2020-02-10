@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStrawpollBot", "SimpleStrawpollBot.csproj", "{D63E5119-DD0B-4067-94C1-0FF20D8F26C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D63E5119-DD0B-4067-94C1-0FF20D8F26C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63E5119-DD0B-4067-94C1-0FF20D8F26C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D63E5119-DD0B-4067-94C1-0FF20D8F26C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D63E5119-DD0B-4067-94C1-0FF20D8F26C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03C88355-9007-4584-8304-7F161AA18676}
+	EndGlobalSection
+EndGlobal
