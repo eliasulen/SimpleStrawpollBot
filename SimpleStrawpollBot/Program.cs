@@ -83,9 +83,10 @@ namespace SimpleStrawpollBot
                     for (int i = 0; i <= votes; i++)
                     {
                         await page.GoToAsync(requestUrl);
-                        Console.WriteLine($"Voted #{i + 1} {vote} | {voteId} | {strawPollId}");
+                        var delay = rnd.Next(minDelay, maxDelay);
+                        Console.WriteLine($"Voted #{i + 1} {vote} | next in {delay} milliseconds | {voteId} | {strawPollId}");
                         await page.DeleteCookieAsync();
-                        await Task.Delay(rnd.Next(minDelay, maxDelay));
+                        await Task.Delay(delay);
                     }
 
                     Console.WriteLine($"Finished. Vote attempts: {votes}");
