@@ -84,7 +84,7 @@ namespace SimpleStrawpollBot
                     {
                         await page.GoToAsync(requestUrl);
                         var delay = rnd.Next(minDelay, maxDelay);
-                        Console.WriteLine($"Voted #{i + 1} {vote} | next in {delay} milliseconds | {voteId} | {strawPollId}");
+                        Console.WriteLine($"Voted #{i + 1} of {votes} - {vote} | next in {delay} milliseconds | {voteId} | {strawPollId}");
                         await page.DeleteCookieAsync();
                         await Task.Delay(delay);
                     }
